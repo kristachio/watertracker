@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "16a281a5-75b1-49e8-bf54-a430ff4a6d12"
+      }
+    },
+    "owner": "kristachio"
   }
 }
