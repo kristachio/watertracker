@@ -17,7 +17,7 @@ const Drawer = createDrawerNavigator();
 
 const screenOptions = {
     headerTintColor: '#fff',
-    headerStyle: { backgroundColor: '#5637DD' }
+    headerStyle: { backgroundColor: 'blue' }
 };
 
 const DashboardNavigator = () => {
@@ -29,14 +29,6 @@ const DashboardNavigator = () => {
                 component={DashboardScreen}
                 options={({ navigation }) => ({
                     title: 'Dashboard',
-                    headerLeft: () => (
-                        <Icon
-                            name='home'
-                            type='font-awesome'
-                            iconStyle={styles.stackIcon}
-                            onPress={() => navigation.toggleDrawer()}
-                        />
-                    )
                 })}
             />
         </Stack.Navigator>
@@ -51,12 +43,13 @@ const NotificationsNavigator = () => {
                 name='Notifications'
                 component={NotificationsScreen}
                 options={({ navigation }) => ({
+                    title: 'Notifications',
                     headerLeft: () => (
                         <Icon
-                            name='info-circle'
+                            name='arrow-left'
                             type='font-awesome'
                             iconStyle={styles.stackIcon}
-                            onPress={() => navigation.toggleDrawer()}
+                            onPress={() => navigation.goBack()}
                         />
                     )
                 })}
@@ -76,10 +69,10 @@ const SettingsNavigator = () => {
                     title: 'Settings',
                     headerLeft: () => (
                         <Icon
-                            name='address-card'
+                            name='arrow-left'
                             type='font-awesome'
                             iconStyle={styles.stackIcon}
-                            onPress={() => navigation.toggleDrawer()}
+                            onPress={() => navigation.goBack()}
                         />
                     )
                 })}
@@ -102,15 +95,14 @@ const DiaryNavigator = () => {
                     title: 'Water Intake Diary',
                     headerLeft: () => (
                         <Icon
-                            name='list'
+                            name='arrow-left'
                             type='font-awesome'
                             iconStyle={styles.stackIcon}
-                            onPress={() => navigation.toggleDrawer()}
+                            onPress={() => navigation.goBack()}
                         />
                     )
                 })}
             />
-            
         </Stack.Navigator>
     );
 };
