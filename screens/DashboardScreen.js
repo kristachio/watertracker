@@ -2,6 +2,8 @@ import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { AntDesign, FontAwesome } from '@expo/vector-icons';
 import ProgressComponent from '../components/ProgressComponent';
 
+
+
 const DashboardScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
