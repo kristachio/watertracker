@@ -1,10 +1,13 @@
-import React from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import { AntDesign, FontAwesome } from '@expo/vector-icons';
+import ProgressComponent from '../components/ProgressComponent';
 
 const DashboardScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <View style={styles.progressContainer}>
+        <ProgressComponent />
+      </View>
       <View style={styles.buttonsContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('Diary')}>
           <AntDesign name='calendar' size={50} color='blue' />
@@ -37,6 +40,9 @@ const styles = StyleSheet.create({
     borderTopColor: '#ddd',
     backgroundColor: '#fff',
     height: 150,
+  },
+  progressContainer: {
+    marginTop: 30,
   },
 });
 
