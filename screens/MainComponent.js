@@ -134,7 +134,7 @@ const Main = () => {
             <Drawer.Navigator
                 initialRouteName='Dashboard'
                 drawerContent={CustomDrawerContent}
-                drawerStyle={{ backgroundColor: '#CEC8FF' }}
+                drawerStyle={{ backgroundColor: '#c9dcff' }}
             >
                 <Drawer.Screen
                     name='Dashboard'
@@ -159,7 +159,7 @@ const Main = () => {
                         title: 'Water Intake Diary',
                         drawerIcon: ({ color }) => (
                             <Icon
-                                name='list'
+                                name='calendar'
                                 type='font-awesome'
                                 size={24}
                                 iconStyle={{ width: 24 }}
@@ -175,7 +175,7 @@ const Main = () => {
                         title: 'Notifications',
                         drawerIcon: ({ color }) => (
                             <Icon
-                                name='info-circle'
+                                name='bell'
                                 type='font-awesome'
                                 size={24}
                                 iconStyle={{ width: 24 }}
@@ -191,7 +191,7 @@ const Main = () => {
                         title: 'Settings',
                         drawerIcon: ({ color }) => (
                             <Icon
-                                name='address-card'
+                                name='gear'
                                 type='font-awesome'
                                 size={24}
                                 iconStyle={{ width: 24 }}
@@ -207,7 +207,7 @@ const Main = () => {
 
 const styles = StyleSheet.create({
     drawerHeader: {
-        backgroundColor: '#5637DD',
+        backgroundColor: '#0b269e',
         height: 140,
         alignItems: 'center',
         justifyContent: 'center',
