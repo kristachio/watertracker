@@ -134,7 +134,7 @@ const Main = () => {
             <Drawer.Navigator
                 initialRouteName='Dashboard'
                 drawerContent={CustomDrawerContent}
-                drawerStyle={{ backgroundColor: '#c9dcff' }}
+                drawerStyle={{ backgroundColor: '#CDE8F0' }}
             >
                 <Drawer.Screen
                     name='Dashboard'
@@ -207,7 +207,7 @@ const Main = () => {
 
 const styles = StyleSheet.create({
     drawerHeader: {
-        backgroundColor: '#3e98c7',
+        backgroundColor: '#3FC0E0',
         height: 140,
         alignItems: 'center',
         justifyContent: 'center',

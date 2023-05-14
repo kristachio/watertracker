@@ -1,5 +1,5 @@
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
-import { AntDesign, FontAwesome } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 import ProgressComponent from '../components/ProgressComponent';
 
 
@@ -12,10 +12,10 @@ const DashboardScreen = ({ navigation }) => {
       </View>
       <View style={styles.buttonsContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('Diary')}>
-          <AntDesign name='calendar' size={50} color='#3E98C7' />
+          <FontAwesome name='calendar' size={50} color='#3E98C7' />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
-          <AntDesign name='bells' size={50} color='#3E98C7' />
+          <FontAwesome name='bell' size={50} color='#3E98C7' />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
           <FontAwesome name='gear' size={50} color='#3E98C7' />
