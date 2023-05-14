@@ -17,7 +17,7 @@ const Drawer = createDrawerNavigator();
 
 const screenOptions = {
     headerTintColor: '#fff',
-    headerStyle: { backgroundColor: 'blue' }
+    headerStyle: { backgroundColor: '#3e98c7' }
 };
 
 const DashboardNavigator = () => {
@@ -207,7 +207,7 @@ const Main = () => {
 
 const styles = StyleSheet.create({
     drawerHeader: {
-        backgroundColor: '#0b269e',
+        backgroundColor: '#3e98c7',
         height: 140,
         alignItems: 'center',
         justifyContent: 'center',
