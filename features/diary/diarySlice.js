@@ -2,9 +2,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { baseUrl } from '../../shared/baseUrl';
 
 export const fetchDiary = createAsyncThunk(
-    'comments/fetchDiary',
+    'diary/fetchDiary',
     async () => {
-        const response = await fetch(baseUrl + 'comments');
+        const response = await fetch(baseUrl + 'diary');
         if (!response.ok) {
             return Promise.reject(
                 'Unable to fetch, status: ' + response.status
