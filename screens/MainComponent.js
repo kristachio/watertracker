@@ -10,6 +10,7 @@ import {
 import DashboardScreen from './DashboardScreen';
 import NotificationsScreen from './NotificationsScreen';
 import SettingsScreen from './SettingsScreen';
+import DailyGoalScreen from './DailyGoalScreen';
 import { Icon } from 'react-native-elements';
 import logo from '../assets/Time4WaterLogo.png'
 
@@ -67,6 +68,28 @@ const SettingsNavigator = () => {
                 component={SettingsScreen}
                 options={({ navigation }) => ({
                     title: 'Settings',
+                    headerLeft: () => (
+                        <Icon
+                            name='arrow-left'
+                            type='font-awesome'
+                            iconStyle={styles.stackIcon}
+                            onPress={() => navigation.goBack()}
+                        />
+                    )
+                })}
+            />
+        </Stack.Navigator>
+    );
+};
+const DailyGoalNavigator = () => {
+    const Stack = createStackNavigator();
+    return (
+        <Stack.Navigator screenOptions={screenOptions}>
+            <Stack.Screen
+                name='Daily Water Intake Goal'
+                component={DailyGoalScreen}
+                options={({ navigation }) => ({
+                    title: 'DailyGoal',
                     headerLeft: () => (
                         <Icon
                             name='arrow-left'
@@ -198,6 +221,22 @@ const Main = () => {
                                 color={color}
                             />
                         )
+                    }}
+                />
+                <Drawer.Screen
+                    name='DailyGoal'
+                    component={DailyGoalNavigator}
+                    options={{
+                        title: 'Daily Water Intake Goal',
+                        drawerIcon: ({ color }) => (
+                            <Icon
+                                name='water'
+                                type='font-awesome'
+                                size={24}
+                                iconStyle={{ width: 24 }}
+                                color={color}
+                            />
+                        ),
                     }}
                 />
             </Drawer.Navigator>
