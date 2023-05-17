@@ -6,7 +6,7 @@ const SettingsScreen = () => {
   const navigation = useNavigation();
 
   const settingsButtons = [
-    { title: 'Current Daily Water Intake Goal', screen: 'DailyGoalScreen' },
+    { title: 'Current Daily Water Intake Goal', screen: 'DailyGoal' },
     { title: 'Water Intake Calculator by Weight' },
     { title: 'Units of Measurement' },
   ];
