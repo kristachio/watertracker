@@ -13,6 +13,9 @@ import SettingsScreen from './SettingsScreen';
 import DailyGoalScreen from './DailyGoalScreen';
 import { Icon } from 'react-native-elements';
 import logo from '../assets/Time4WaterLogo.png'
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchDiary } from '../features/diary/diarySlice';
 
 const Drawer = createDrawerNavigator();
 
@@ -86,10 +89,10 @@ const DailyGoalNavigator = () => {
     return (
         <Stack.Navigator screenOptions={screenOptions}>
             <Stack.Screen
-                name='Daily Water Intake Goal'
+                name='DailyGoal'
                 component={DailyGoalScreen}
                 options={({ navigation }) => ({
-                    title: 'DailyGoal',
+                    title: 'Daily Water Intake Goal',
                     headerLeft: () => (
                         <Icon
                             name='arrow-left'
@@ -146,6 +149,12 @@ const CustomDrawerContent = (props) => (
 
 
 const Main = () => {
+    const dispatch = useDispatch();
+        
+    useEffect(() =>{
+        dispatch(fetchDiary())
+    }, [dispatch]);
+
     return (
         <View
             style={{
@@ -227,10 +236,10 @@ const Main = () => {
                     name='DailyGoal'
                     component={DailyGoalNavigator}
                     options={{
-                        title: 'Daily Water Intake Goal',
+                        title: 'Water Intake Goal',
                         drawerIcon: ({ color }) => (
                             <Icon
-                                name='water'
+                                name='tint'
                                 type='font-awesome'
                                 size={24}
                                 iconStyle={{ width: 24 }}
